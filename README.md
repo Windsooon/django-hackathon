@@ -12,6 +12,6 @@ django base settings with docker
     Now you can look at http://127.0.0.1:8000
 
 
-![work](https://raw.githubusercontent.com/Windsooon/docker-django-base/master/imgs/worked.png)
+![work](https://raw.githubusercontent.com/Windsooon/django-hackathon/master/imgs/work.png)
 
 3. You can add what you need in requirements.txt
