@@ -1,0 +1,24 @@
+version: '2'
+services:
+  web:
+    restart: always
+    build: ./django_base/
+    ports:
+      - "8000"
+    command: bash -c "./docker_start.sh"
+    environment:
+      PYTHONPATH: '/usr/src/app/'
+    volumes:
+      - ./django_base:/usr/src/app
+
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - ./django_base:/usr/src/app
+      - ./nginx/sites-enabled/:/etc/nginx/sites-enabled
+      - ./nginx/sites-available/:/etc/nginx/sites-available
+    links:
+      - web:web
