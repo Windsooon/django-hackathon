@@ -26,8 +26,9 @@ and  http://127.0.0.1/api/playlist/
 
 ![api_playlist](https://raw.githubusercontent.com/Windsooon/django-hackathon/master/imgs/playlist.png)
 
-3. You can add what you need in requirements.txt
-4. playlist->inner just like tracks->album, sorry for the confusion, there modals just like this:
+3. or online demo http://windson.pythonanywhere.com/api/inner
+4. You can add what you need in requirements.txt
+5. playlist->inner just like tracks->album, sorry for the confusion, there modals just like this:
 
 
         class Inner(models.Model):
