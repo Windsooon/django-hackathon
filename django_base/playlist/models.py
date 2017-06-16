@@ -1,13 +1,11 @@
 from django.db import models
+from inner.models import Inner
 
 
 class Playlist(models.Model):
-    CATEGORY_CHOICES = (
-            (0, 'EDUCATION'),
-            (1, 'TALKSHOW'),
-            (2, 'GAMES'),
-    )
 
+    inner = models.ForeignKey(
+        Inner, related_name="playlist", on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     real_id = models.CharField(max_length=50)
     channel_id = models.CharField(max_length=50)

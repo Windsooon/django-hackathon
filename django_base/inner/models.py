@@ -2,14 +2,9 @@ from django.db import models
 
 
 class Inner(models.Model):
-    CATEGORY_CHOICES = (
-            (0, 'EDUCATION'),
-            (1, 'TALKSHOW'),
-            (2, 'GAMES'),
-    )
 
     name = models.CharField(max_length=50)
-    category = models.SmallIntegerField(default=0)
+    category = models.CharField(max_length=100)
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
 
