@@ -5,7 +5,7 @@ from inner.models import Inner
 class Playlist(models.Model):
 
     inner = models.ForeignKey(
-        Inner, related_name="playlist", on_delete=models.CASCADE)
+        Inner, related_name="playlist", on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=50)
     real_id = models.CharField(max_length=50)
     channel_id = models.CharField(max_length=50)
